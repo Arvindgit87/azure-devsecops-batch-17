@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+    - main
+    - release/*
+jobs:
+  terraform:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Install Terraform
+        run: |
+          curl -fsSL https://apt.releases.hashicorp.com/gpg |
+
+    
